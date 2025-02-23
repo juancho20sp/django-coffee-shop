@@ -1,0 +1,6 @@
+{% comment %} Este "url" es "add/" del urls.py, solo que accedemos por nombre {% endcomment %}
+<form action="{% url "add_product" %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Product</button>
+</form>
